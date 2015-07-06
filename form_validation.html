@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Nathan Kong">
+	<meta name="description" content="Form Validation">
+	<title>Form Validation</title>
+	<!--CSS for forms-->
+	<style>
+		html, body {
+			margin:0;
+			padding:0;
+			font-family:"MS Sans Serif", Geneva, sans-serif;
+		}
+		
+		h1{
+			margin: 20px auto 0;
+			text-align:center;
+			letter-spacing:2px;
+			color:#6600FF;
+		}
+		
+		form{
+			margin:0 auto;
+			width: 65%;
+			min-width:300px;
+			text-align:left;
+		}
+
+		label{
+			display: block;
+			margin-top: 20px;
+			letter-spacing:2px;
+			color:#6600FF;
+		}
+		
+		input,textarea {
+			background: #efefef;
+			border:1px solid #dedede;
+			padding: 10px;
+			font-size:0.9em;
+			color:#3a3a3a;
+			border-radius: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+		}
+		
+		input:focus, textarea:focus {
+			border: 1px solid #97d6eb;
+		}
+		
+		input {
+			height: 15px;
+		}
+		
+		textarea{
+			height: 200px;
+		}
+		
+		#submit{
+			width: 200px;
+			height: 35px;
+			background:#dedede;
+			border:none;
+			cursor:pointer;
+			margin: 20px;
+			opacity:0.75;
+		}
+		
+		#submit:hover {
+			opacity:1.0;
+		}
+		
+		#submit:active {
+			opacity:0.8;
+			background: #97d6eb;
+		}
+		
+		.fullWidth input, textarea{
+			width:100%;
+		}
+		
+		.center{
+			margin: 0 auto;
+			text-align:center;
+		}
+		
+	</style>	
+</head>
+<body>
+	<h1>Validate This Form!</h1>
+	<form>
+		<label>Name: </label>
+		<div class="fullWidth"><input type="text" name="name" required placeholder="Enter your name"></div>
+		<label>Email: </label>
+		<div class="fullWidth"><input type="email" name="email" required placeholder="Enter your email"></div>
+		<label>Website: </label>
+		<div class="fullWidth"><input type="url" name="website" placeholder="Enter URL"></div>
+		<label>Phone Number: </label>
+		<div class="fullWidth"><input type="tel" name="phone" placeholder="Enter a phone number"></div>
+		<label>Gender:</label>
+		<div class="leftAlign">
+			<input type="radio" name="gender" value="male" required>male<br>	
+			<input type="radio" name="gender" value="female">female<br>
+			<input type="radio" name="gender" value="other">person
+		</div>
+		<label>Ethnicity: </label>
+		<input type="checkbox" value="ethnicity" name="white" required>White
+		<input type="checkbox" value="ethnicity" name="black">Black
+		<input type="checkbox" value="ethnicity" name="asian">Asian
+		<input type="checkbox" value="ethnicity" name="indian">Indian
+		<input type="checkbox" value="ethnicity" name="other">I don't understand the question		
+		<label>Opinions</label>
+		<select>
+			<option value="like">I like this form</option>
+			<option value="dislike">I don't like this form</option>
+			<option value="asian">I don't get this form</option>
+		</select>
+		<label>Message:</label>
+		<div class="fullWidth"><textarea type="text" name="message"></textarea></div>
+		
+		<div class="center"><input type="submit" value="Submit form!" id="submit"></div>
+	</form>
+</body>
+</html>
